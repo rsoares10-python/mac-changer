@@ -9,7 +9,8 @@ import re
 def get_args():
     '''Get user arguments  and parse them.'''
 
-    parser = optparse.OptionParser()
+    usage = "usage: %prog [OPTION1] arg1 [OPTION2] arg2"
+    parser = optparse.OptionParser(usage = usage)
     parser.add_option("-i", "--interface", dest="interface", help="Interface to change its MAC address")
     parser.add_option("-m", "--mac", dest="new_mac", help="New MAC address")
     (options, arguments) = parser.parse_args()
